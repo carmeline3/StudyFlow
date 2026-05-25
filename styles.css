@@ -9,19 +9,39 @@ scroll-behavior:smooth;
 
 body{
 background:#0a0a0a;
+ animation-name: myAnimation;
+animation-duration: 15s;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+}  
 
+@keyframes myAnimation{
+    0%{
+         background-color: #0a0a0a ;
+    }
+    20%{
+         background-color: rgb(0, 0, 0);
+    }
+    40%{
+         background-color: #0a0a0a;
+    }
+    60%{
+        background-color: rgb(0, 0, 0);
+    }
+    80%{
+       background-color: rgb(9, 9, 9);
+    }
+    100%{
+        background-color: rgb(12, 12, 12);
+    }
 }
-
 section{
 padding:80px;
-border:10px solid red;
 }
 
 
 /* This is the navbar section */
-
 nav{
-border:3vh solid green;
 width:100%;
 height:12vh;
 display:flex;
@@ -57,6 +77,7 @@ color:#8b5cf6;
 /* This is the header section */
 header{
 min-height:100vh;
+min-width: 100%;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -64,9 +85,10 @@ flex-direction:column;
 text-align:center;
 padding:120px;
 gap:30px;
-background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),url("images/pexels-tima-miroshnichenko-6549584.jpg");
+background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),url("images/pexels-tima-miroshnichenko-6549584.jpg");
 background-size:cover;
 background-position:center;
+background-repeat: no-repeat;
 }
 
 header h1{
@@ -94,10 +116,6 @@ background:#8b5cf6;
 font-size:18px;
 }
 
-.second-button{
-background:transparent ;
-border:1px solid rgba(255,255,255,0.2);
-}
 
 
 
@@ -106,7 +124,7 @@ border:1px solid rgba(255,255,255,0.2);
 position:absolute;
 border-radius:50%;
 opacity:0.5;
-animation:float 8s ease-in-out infinite;
+animation:float 8s infinite;
 }
 
 .one{
@@ -161,10 +179,10 @@ min-height:100vh;
 }
 
 .about-image{
-height:500px;
-width:500px;
+min-height:500px;
+min-width:500px;
 border-radius:30px;
-background:url("images/a72cc93c1e76afdb5fe54a5c9676b000.jpg");
+background-image:url("images/a72cc93c1e76afdb5fe54a5c9676b000.jpg");
 background-size:cover;
 background-position:center; 
 }
@@ -214,7 +232,7 @@ gap:25px;
 }
 
 .why-card{
-background:#111111;
+background:transparent;
 padding:35px;
 border-radius:25px;
 transition:0.3s ease;
@@ -223,12 +241,13 @@ transition:0.3s ease;
 .why-card:hover{
 transform:translateY(-10px);
 background:#181818;
+box-shadow: 0 0 10px #a194a3,0 0 25px #d1bed1,0 0 40px #8c66a2;
 }
 
 .why-card i{
 font-size:40px;
 margin-bottom:20px;
-color:#8b5cf6;
+color:#785db8;
 }
 
 .why-card h2{
@@ -322,23 +341,56 @@ flex-direction:column;
 gap:20px;
 }
 
-.schedule{
+/* This is the section to add task on the form */
+#forth-section{
+text-align:center;
+}
+
+.last-place{
+margin-top:40px;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:40px;
+}
+
+.form{
+background:#111111;
+padding:40px;
+border-radius:25px;
+display:flex;
+flex-direction:column;
+gap:20px;
+width:500px;
+}
+
+.form input{
+height:60px;
+border:none;
+border-radius:40px;
 background:#1a1a1a;
+padding-left:20px;
+}
+
+.form button{
+height:60px;
+border-radius:40px;
+background:#8b5cf6;
+}
+.task{
+background:#111111;
 padding:20px;
 border-radius:20px;
+width:500px;
+text-align:left;
 }
 
-.schedule label{
-display:flex;
-gap:15px;
-font-size:20px;
-margin-bottom:10px;
-}
-
-.schedule p{
+.task p{
 color:#b4b4b4;
+margin-top:10px;
 }
 
+/* This is my subject section */
 
 .subject-title{
 text-align:center;
@@ -399,9 +451,26 @@ border-radius:20px;
 overflow:hidden;
 }
 
-.subject-fill{
+.math-fill{
 height:100%;
 border-radius:20px;
+background-color: #3b82f6;
+}
+
+
+.english-fill{
+height:100%;
+border-radius:20px;
+background-color: #0af234;
+width: 10%;
+}
+
+
+.accounting-fill{
+height:100%;
+border-radius:20px;
+background-color: #f20abc;
+width: 50%;
 }
 
 
@@ -411,15 +480,9 @@ justify-content:space-between;
 align-items:center;
 }
 
-.subject-info button{
-padding:10px 18px;
-border-radius:20px;
-background:#9272dd;
-}
 
 
-
-
+/* This is my motivation section */
 #third-section{
 display:flex;
 flex-direction:column;
@@ -450,12 +513,7 @@ line-height:35px;
 color:#b4b4b4;
 }
 
-.motivation-paragraphs button{
-width:220px;
-height:60px;
-border-radius:30px;
-background:#9272dd;
-}
+
 
 .motivation-card{
 background:#111111;
@@ -481,10 +539,6 @@ line-height:35px;
 margin-top:15px;
 }
 
-.progress-card p{
-margin:12px 0;
-color:#d4d4d4;
-}
 
 .progress-bar{
 width:100%;
@@ -493,16 +547,10 @@ background:#2a2a2a;
 border-radius:20px;
 }
 
-
-.streak-card,.focus-card{
-text-align:center;
+.progress-math{
+    background-color: #3b82f6;
 }
 
-.streak-card h1,.focus-card h1{
-font-size:50px;
-margin:10px 0;
-color:#8b5cf6;
-}
 
 #third-section h4{
 font-size:45px;
@@ -531,43 +579,8 @@ color:#b4b4b4;
 }
 
 
-#forth-section{
-text-align:center;
-}
 
-.last-place{
-margin-top:40px;
-display:flex;
-flex-direction:column;
-align-items:center;
-gap:40px;
-}
-
-.form{
-background:#111111;
-padding:40px;
-border-radius:25px;
-display:flex;
-flex-direction:column;
-gap:20px;
-width:500px;
-}
-
-.form input{
-height:60px;
-border:none;
-border-radius:40px;
-background:#1a1a1a;
-padding-left:20px;
-}
-
-.form button{
-height:60px;
-border-radius:40px;
-background:#8b5cf6;
-}
-
-
+/* This is the footer section */
 
 footer{
 background:#0d0d0d;
@@ -668,6 +681,7 @@ margin-top:30px;
 }
 
 
+/* These are my media queries to make it responsive */
 @media(max-width:1000px){
 
 #about,#first-section,.motivation,.footer-words{
@@ -704,12 +718,16 @@ font-size:55px;
 line-height:70px;
 }
 
+header{
+    min-width:115%;
+    
+}
 .show-text{
 width:100%;
 }
 
 .why-cards,.subjects-cards,.motivate,.in-card{
-grid-template-columns:1fr;
+grid-template-columns:repeat(1, 1fr);
 }
 
 .quote-card{
@@ -720,7 +738,7 @@ grid-column:span 1;
 width:100%;
 }
 
-.showcase-buttons{
+.show-buttons{
 flex-direction:column;
 }
 

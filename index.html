@@ -35,13 +35,10 @@
 Transform The Way<br>You Study Everyday
 </h1>
 <p class="show-text">
-Build better habits, stay organized,
-and create a calmer study routine
-with StudyFlow.
+Build better habits, stay organized,and create a calmer study routine with StudyFlow.
 </p>
 <div class="show-buttons">
 <button>Get Started</button>
-<button class="second-button">Explore More</button>
 </div>
 </header>
 
@@ -56,9 +53,7 @@ with StudyFlow.
 <div class="about-text">
 <h1>Helping Students Study Smarter</h1>
 <p>
-StudyFlow helps students organize tasks,
-manage subjects, stay motivated,
-and reduce study stress.
+StudyFlow helps students organize tasks,manage subjects, stay motivated,and reduce study stress.
 </p>
 
 <button>Learn More</button>
@@ -98,11 +93,8 @@ and reduce study stress.
 <div class="planner-words">
 <div class="planner-paragraphs">
 <h1>Your Daily Study Plan</h1>
-<p>
-Structure your day with focused study sessions and healthy breaks.
-</p>
+<p>Structure your day with focused study sessions and healthy breaks.</p>
 <div class="planner-buttons">
-<button>Start Planning</button>
 <button>View Tasks</button>
 </div>
 </div>
@@ -126,38 +118,19 @@ Structure your day with focused study sessions and healthy breaks.
 </div>
 </div>
 
-<div class="planner">
-<h2>Today's Plan</h2>
-<p>15 May 2026</p>
 
-<div class="schedule">
-<label>
-<input type="checkbox">Maths</input>
-</label>
-<p>Algebra practice</p>
-</div>
-
-<div class="schedule">
-<label>
-<input type="checkbox">Break</input>
-</label>
-<p>Take a short break</p>
+<section id="forth-section">
+<h1>Add Your Tasks</h1>
+<div class="last-place">
+<div class="form">
+<input type="text" id="taskInput" placeholder="Enter task">
+<input type="date" id="dueDate">
+<button onclick="addTask()">Add Task</button>
 </div>
 
-<div class="schedule">
-<label>
-<input type="checkbox">Accounting</input>
-</label>
-<p>Income Statement</p>
+<div id="taskContainer"></div>
 </div>
-
-<div class="schedule">
-<label>
-<input type="checkbox">English</input>
-</label>
-<p>Essay Writing</p>
-</div>
-</div>
+</section>
 </section>
 
 <section id="second-section">
@@ -179,7 +152,6 @@ Structure your day with focused study sessions and healthy breaks.
 
 <div class="subject-info">
 <p>4 hrs this week</p>
-<button>Study</button>
 </div>
 </div>
 
@@ -197,7 +169,6 @@ Structure your day with focused study sessions and healthy breaks.
 </div>
 <div class="subject-info">
 <p>3 hrs this week</p>
-<button>Read</button>
 </div>
 </div>
 
@@ -215,7 +186,6 @@ Structure your day with focused study sessions and healthy breaks.
 
 <div class="subject-info">
 <p>5 hrs this week</p>
-<button>Continue</button>
 </div>
 </div>
 </div>
@@ -227,7 +197,6 @@ Structure your day with focused study sessions and healthy breaks.
 <div class="motivation-paragraphs">
 <h1>Stay Focused</h1>
 <p>Small progress every day leads to bigger results.</p>
-<button>Stay Motivated</button>
 </div>
 
 <div class="motivation-card">
@@ -237,34 +206,31 @@ Structure your day with focused study sessions and healthy breaks.
 <p>"Success is the sum of small efforts repeated daily."</p>
 </div>
 
-<div class="inside-card progress-card">
+<div class="inside-card">
 <h3>Weekly Progress</h3>
 <p>Mathematics</p>
 
 <div class="progress-bar">
-<div class="progress-math"></div>
 </div>
 <p>Accounting</p>
 
 <div class="progress-bar">
-<div class="progress-accounting"></div>
 </div>
 
 <p>English</p>
 <div class="progress-bar">
-<div class="progress-english"></div>
 </div>
 
 </div>
 
-<div class="inside-card streak-card">
+<div class="inside-card">
 <h2>Study Streak</h2>
 <h1>12 Days</h1>
 <p>Keep going!</p>
 </div>
 
 
-<div class="inside-card focus-card">
+<div class="inside-card">
 <h2>Focus Time</h2>
 <h1>4.5 hrs</h1>
 <p>Studied today</p>
@@ -296,18 +262,6 @@ Structure your day with focused study sessions and healthy breaks.
 </div>
 </section>
 
-<section id="forth-section">
-<h1>Add Your Tasks</h1>
-<div class="last-place">
-<div class="form">
-<input type="text" id="taskInput" placeholder="Enter task">
-<input type="date" id="dueDate">
-<button onclick="addTask()">Add Task</button>
-</div>
-
-<div id="taskContainer"></div>
-</div>
-</section>
 
 </main>
 
@@ -333,9 +287,7 @@ Structure your day with focused study sessions and healthy breaks.
 <form>
 <h2>Subscribe</h2>
 <input type="text" id="email" placeholder="Enter Email">
-<button type="button" onclick="subscribe()">
-Subscribe
-</button>
+<button type="button" onclick="subscribe()">Subscribe</button>
 </form>
 </div>
 
